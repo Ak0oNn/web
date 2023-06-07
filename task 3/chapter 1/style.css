@@ -1,0 +1,139 @@
+.body{
+    margin: 0px;
+    background-color: white;
+    font-size: 15px;
+    color: black;
+    line-height: 1.6;
+}
+
+
+
+.conteiner{
+    width: 100%;
+    margin: 0;
+    
+}
+
+
+
+.intro{
+    display: flex;
+    width: 100%;
+}
+
+
+.main{
+    cursor: pointer;
+    display: flex;
+    margin: 80px 0px 0px;
+    background-color: rgb(60, 161, 161);
+}
+
+.main:hover{
+    color: aqua;
+}
+
+
+.main__img{
+    height: 250px;
+    margin: 20px;
+    width: 30%;
+}
+
+.main__p{
+    width: 60%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.latest{
+    margin:  auto;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+.latest__p{
+    margin-top: 5px; margin-bottom: 5px;
+}
+
+.header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(95, 13, 13);
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    cursor: pointer;
+    margin: 10px ;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+
+.nav{
+    font-size: 14px;
+}
+
+.nav__link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    color: gray;
+    text-decoration: none;
+}
+
+.nav__link:hover{
+    color: yellow;
+}
+
+
+.others{
+    top: 0px;;
+    width: 100%; 
+    display: flex;
+}
+
+
+.others__new{
+    cursor: pointer;
+    margin: 10px;
+    width: 25%;
+    flex-wrap: wrap; 
+}
+
+.others__new:hover{
+    color: aqua;
+}
+
+.others__img{
+    width: 100%;
+}
+
+.others__h3{
+    margin: 2px;text-align: center;
+}
+
+.others__p{
+    margin: 2px;text-align: left;
+
+}
+
+.others__bt{
+    cursor: pointer;
+    background-color: rgb(90, 15, 15);
+    color: white;
+}
+
+
+
