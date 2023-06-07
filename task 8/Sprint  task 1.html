@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>KURS</title>
+</head>
+<body>
+    <div class="intro" style="display: flex;flex-wrap: wrap; width: 100%; justify-content: space-around;">
+        <div calss="Sum" style="">
+            <p style=""> Введите сумму:  </p>
+            <input id="input" type="number" style="width: 60%;">
+            <select id="select" style="width: 30%;">
+                <option value="KZT">KZT</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>  
+        </div>
+        <div class="KZT" style="font-weight: 700;"> 
+            <P style="">KZT (tenge)</P>
+            <input id="result_KZT" style="background-color: rgb(225, 223, 223);">
+        </div>
+        <div class="USD" style="font-weight: 700;">
+            <p style="">USD (dollar)</p>
+            <input id="result_USD" style="background-color: rgb(225, 223, 223);">
+        </div>
+        <div class="EUR" style="font-weight: 700;">
+            <p style="">EUR (euro)</p>
+            <input id="result_EUR" style="background-color: rgb(225, 223, 223);">
+        </div>
+    </div>
+    <script>
+        const USD_Buy = 429
+        const USD_Sale = 431
+        const EUR_Buy = 507
+        const EUR_Sale = 509
+        const input = document.querySelector('#input')
+        const result_KZT =document.querySelector('#result_KZT')
+        const result_EUR =document.querySelector('#result_EUR')
+        const result_USD =document.querySelector('#result_USD')
+        const select = document.querySelector('#select')
+        input.oninput= function(){
+            if(select.value=="KZT"){
+                result_USD.value = (input.value/USD_Sale).toFixed(2)
+                result_EUR.value = (input.value/EUR_Sale).toFixed(2)
+                result_KZT.value = ('-')
+            }else if (select.value=="USD"){
+                result_KZT.value=(input.value*USD_Buy).toFixed(2)
+                result_EUR.value=(result_KZT.value/EUR_Sale).toFixed(2)
+                result_USD.value=('-')
+            }else if (select.value=="EUR"){
+                result_KZT.value=(input.value*EUR_Buy).toFixed(2)
+                result_USD.value=(result_KZT.value/USD_Sale).toFixed(2)
+                result_EUR,value=('-')
+            }
+        }
+        function callOnChange(){
+            console.log("select value: " + select.value)
+            
+        }
+        select.onchange=callOnChange
+
+    </script>
+</body>
+</html>

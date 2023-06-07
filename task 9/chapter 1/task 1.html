@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>        
+    <title>task 1</title>
+</head>
+<body onload="load()">
+    <div style="display: flex; flex-direction: column; width: 20%;">
+        <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+            <div style="margin: auto 0 ;width: 40%; ">
+                <span>
+                    NAME:
+                </span>
+            </div>
+            <div style="text-align: right; width: 60%;">
+                <input id="name" type="text" style="padding: 5px 0; width: 100%;">
+            </div>
+        </div>
+        <div style="display: flex; padding: 10px 0;">
+            <div style="margin: auto 0 ; width: 40%;">
+                <span>
+                    SURNAME:
+                </span>
+            </div>
+            <div style="text-align: right;width: 60%;">
+                <input id="surname" type="text" style="padding: 5px 0; width: 100%;">
+            </div>
+        </div>
+        <div style="display: flex; padding: 10px 0;">
+            <div style="margin: auto 0; width: 40%;">
+                <span>
+                    COUNTRY:
+                </span>
+            </div>
+            <div style="text-align: right; width: 60%;">
+                <select id="country" style="padding: 5px 0; width: 100%;">
+                    <option value="KAZAKHSTAN">KAZAKHSTAN</option>
+                    <option value="UZBEKISTAN">UZBEKISTAN</option>
+                    <option value="KYRGYSTAN">KYRGYSTAN</option>
+                </select>
+            </div>
+        </div>
+        <div style="display: flex; padding: 10px 0;">
+            <div style="margin: auto 0; width: 40%;">
+                <span>
+                    PHONE NUMBER:
+                </span>
+            </div>
+            <div style="text-align: right; width: 60%;">
+                <input id="number" type="number" style="padding: 5px 0; width: 100%;">
+            </div>
+        </div>
+        <div style="display: flex; padding: 10px 0; justify-content: space-around;">
+            <div style="width: 40%;">
+                <button  style="height: 50px;" >REGISTER</button>
+            </div>
+            <div style="width: 40%;">
+                <button  style="height: 50px;" onclick="SaveToDraft()">SAVE TO DRAFT</button>
+            </div>
+        </div>
+    </div>
+    <script>
+       
+        function SaveToDraft(){
+            localStorage.setItem ('name', name.value)
+            localStorage.setItem('surname',surname.value) 
+            localStorage.setItem('country',country.value)
+            localStorage.setItem('number',number.value)
+        }
+        function load(){
+            name.value = localStorage.getItem('name')
+            surname.value = localStorage.getItem('surname')
+            country.value = localStorage.getItem('country')
+            number.value = localStorage.getItem('number')
+        }
+    
+        // function SaveToDraft(){
+        //     document.querySelector('inputName').value = localStorage.name
+        //     document.querySelector('inputSurName').value = localStorage.surName
+        //     document.querySelector('inputSelect').value = localStorage.select
+        //     document.querySelector('inputNumber').value = localStorage.number
+        // }
+        // function load(){
+        //     localStorage.name = document.querySelector('inputName').value
+        //     localStorage.surName=document.querySelector('inputSurName').value
+        //     localStorage.select=document.querySelector('inputSelect').value
+        //     localStorage.number=document.querySelector('inputNumber').value
+        // }
+    </script>
+</body>
+</html>
